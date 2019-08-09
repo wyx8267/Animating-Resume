@@ -1,25 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.token.selector {
+
+.token.comment,
+.token.selector,
+.token.property,
+.token.function{
     color: #000;
 }
 
-.token.property {
-    color: #000;
-}
-
-.token.function {
-    color: #000;
-}
-
-#code{
+#code {
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
-#paper > pre{
+#paper>pre {
     padding-left: 16px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+::-webkit-scrollbar {
+    background-color: lightgray;
+    width: 10px;
+    height: 10px;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
 }
